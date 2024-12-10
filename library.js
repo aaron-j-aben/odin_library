@@ -28,12 +28,7 @@ Book.prototype.info = function() {
  * @param {number} delta 
  */
 function updateLibraryDisplay(delta) {
-    for (book of myLibrary) {
-        /*
-        construct book object
-        1. 
-        */
-    }
+    const latestBook = myLibrary[-1];
 }
 
 function addBookToLibrary(title, author, pages, read) {
