@@ -23,7 +23,11 @@ Book.prototype.info = function() {
     return `${this.title} by  ${this.author}, ${this.pages} pages, ${readString}`;
 };
 
-function updateLibraryDisplay() {
+/**
+ * 
+ * @param {number} delta 
+ */
+function updateLibraryDisplay(delta) {
     for (book of myLibrary) {
         /*
         construct book object
@@ -36,11 +40,12 @@ function addBookToLibrary(title, author, pages, read) {
     const entry = new Book(title, author, pages, read);
     myLibrary.push(entry);
 
-    displayBooks();
+    updateLibraryDisplay(1);
 }
 
 function removeBookFromLibrary() {
-    
+
+    updateLibraryDisplay(-1);
 }
 
 /* button handling */
