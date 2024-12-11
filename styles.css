@@ -140,3 +140,13 @@ header > p {
 .author {
     font-weight: 500;
 }
+
+.read {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.book input[type="checkbox"] {
+    width: 20px;
+}
