@@ -88,3 +88,14 @@ function removeBookFromLibrary() {
 addBookBtn.addEventListener("click", (e) => {
     addBookForm.classList.toggle("dropdown");
 });
+
+addBookForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const title = addBookForm.elements.title.value;
+    const author = addBookForm.elements.author.value;
+    const pages = addBookForm.elements.pages.value;
+    const read = addBookForm.elements.read.checked;
+
+    addBookToLibrary(title, author, pages, read);
+});
