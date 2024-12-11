@@ -66,6 +66,7 @@ function addToDisplay(index) {
     removeBookBtn.textContent = "Remove Book";
 
     removeBookBtn.addEventListener("click", removeFromDisplay);
+    readCBox.addEventListener("click", updateReadStatus);
 
     bookCover.appendChild(title);
     bookCover.appendChild(by);
