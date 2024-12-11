@@ -75,8 +75,17 @@ function addToDisplay(index) {
     shelves.appendChild(bookElem);
 }
 
-function removeFromDisplay() {
+function removeFromDisplay(clickEvent) {
+    const bookToRemove = clickEvent.target.closest(".book");
+    const libIndex = bookToRemove.dataset.libIndex.parseInt();
 
+    shelves.removeChild(bookToRemove);
+
+    for (let i = libIndex; i < myLibrary.children.length; i++) {
+        myLibrary.children[i].dataset.libIndex -= 1;
+    }
+
+    removeBookFromLibrary(libIndex);
 }
 
 function addBookToLibrary(title, author, pages, read) {
@@ -86,9 +95,8 @@ function addBookToLibrary(title, author, pages, read) {
     addToDisplay(myLibrary.length - 1);
 }
 
-function removeBookFromLibrary() {
-
-    removeFromDisplay();
+function removeBookFromLibrary(index) {
+    myLibrary.splice(index, 1);
 }
 
 /* button handling */
