@@ -24,8 +24,8 @@ Book.prototype.info = function() {
     return `${this.title} by  ${this.author}, ${this.pages} pages, ${readString}`;
 };
 
-function addToDisplay() {
-    const latestBook = myLibrary[-1];
+function addToDisplay(index) {
+    const latestBook = myLibrary[index];
 
     const bookElem = document.createElement('div');
     const bookCover = document.createElement('div');
@@ -42,7 +42,7 @@ function addToDisplay() {
     pgs.classList.add('pages');
     readCBox.classList.add('read', 'checkbox');
 
-    bookElem.dataset.libIndex = myLibrary.length - 1;
+    bookElem.dataset.libIndex = index;
 
     title.textContent = latestBook.title;
     by.textContent = 'by';
