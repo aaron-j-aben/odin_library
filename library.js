@@ -7,6 +7,8 @@ const shelves = document.querySelector(".lib-display");
 const addBookBtn = document.querySelector("button.add");
 const addBookForm = document.querySelector("form.add-form");
 
+const exampleRemove = document.querySelector(".example .book-interact");
+
 /**
  * 
  * @param {string} title 
@@ -129,3 +131,5 @@ addBookForm.addEventListener("submit", (e) => {
     addBookToLibrary(title, author, pages, read);
     addBookForm.reset();
 });
+
+exampleRemove.addEventListener("click", removeFromDisplay);
