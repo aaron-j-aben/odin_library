@@ -47,7 +47,7 @@ function addToDisplay(index) {
     title.textContent = latestBook.title;
     by.textContent = 'by';
     author.textContent = latestBook.author;
-    pgs.textContent = latestBook.pages.toString();
+    pgs.textContent = latestBook.pages + " pages";
     // make checkbox checked if book is read
 
     bookCover.appendChild(title);

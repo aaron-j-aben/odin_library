@@ -46,7 +46,37 @@ header > p {
     box-shadow: 1px 1px 1px rgba(33, 33, 33, 0.464);
 }
 
+/* Shelf Styling */
+.main-stage {
+    display: flex;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.lib-display {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 /* Book Items Styles */
 .book {
+    width: 200px;
     text-align: center;
+}
+
+.book-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+    background-color: blanchedalmond;
+    height: 200px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-weight: 500;
 }
