@@ -75,6 +75,11 @@ header > p {
 .book-info > input {
     max-width: 10rem;
     padding: 5px 10px;
+    color: rgb(115, 30, 30);
+}
+
+.book-info > input::placeholder {
+    color: rgba(115, 30, 30, 0.375);
 }
 
 #book-pages {
