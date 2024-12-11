@@ -87,7 +87,7 @@ header > p {
     text-align: end;
 }
 
-#new-book {
+.book-interact {
     width: 8rem;
     height: 1.8rem;
     border: none;
@@ -97,7 +97,7 @@ header > p {
     box-shadow: 1px 1px 2px black;
 }
 
-#new-book:active {
+.book-interact:active {
     box-shadow: inset 1px 1px 2px black;
 }
 
@@ -150,4 +150,11 @@ header > p {
 
 .book input[type="checkbox"] {
     width: 20px;
+}
+
+.book .book-interact {
+    font-size: 0.8rem;
+    width: 6rem;
+    height: 1.6rem;
+    margin-top: 10px;
 }
