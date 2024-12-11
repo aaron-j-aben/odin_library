@@ -12,22 +12,24 @@
         <p class="web-head">Your Library</p>
         <button class="add" type="button">New Book</button>
 
-        <form action="#">
+        <form class="add-form" action="#">
             <div class="book-info">
                 <label for="book-title">Title</label>
-                <input type="text" required>
+                <input type="text" id="book-title" name="title" required>
             </div>
             <div class="book-info">
                 <label for="book-author">Author</label>
-                <input type="text" required>
+                <input type="text" id="book-author" name="author" required>
             </div>
             <div class="book-info">
                 <label for="book-pages">Number of Pages</label>
-                <input type="number" min="0" step="10" value="0" pattern="\d*" required>
+                <input type="number" id="book-pages" name="pages" min="0" step="10" value="0" pattern="\d*" required>
             </div>
             <div class="book-info">
+                <label for="book-read">Read?</label>
+                <input type="checkbox" id="book-read" name="read">
             </div>
-            <button type="submit">Add Book</button>
+            <button id="new-book" type="submit">Add Book</button>
         </form>
 
     </header>

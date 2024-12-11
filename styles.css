@@ -12,7 +12,9 @@ body {
 }
 
 header {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 50px 0;
 }
 
@@ -44,6 +46,39 @@ header > p {
 .add:active {
     transform: translate(1px, 1px);
     box-shadow: 1px 1px 1px rgba(33, 33, 33, 0.464);
+}
+
+/* Add New Book form */
+.add-form {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22rem;
+    padding: 20px 30px;
+    gap: 10px;
+    margin-top: 25px;
+    border-radius: 20px;
+}
+
+.book-info {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    gap: 20px;
+}
+
+.book-info > label {
+    justify-self: center;
+    align-self: center;
+}
+
+.book-info > input {
+    max-width: 10rem;
+    padding: 5px 10px;
+}
+
+#book-pages {
+    text-align: end;
 }
 
 /* Shelf Styling */
