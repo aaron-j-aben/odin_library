@@ -68,7 +68,7 @@ function addBookToLibrary(title, author, pages, read) {
     const entry = new Book(title, author, pages, read);
     myLibrary.push(entry);
 
-    addToDisplay();
+    addToDisplay(myLibrary.length - 1);
 }
 
 function removeBookFromLibrary() {
