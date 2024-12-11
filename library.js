@@ -23,24 +23,28 @@ Book.prototype.info = function() {
     return `${this.title} by  ${this.author}, ${this.pages} pages, ${readString}`;
 };
 
-/**
- * 
- * @param {number} delta 
- */
-function updateLibraryDisplay(delta) {
+function addToDisplay() {
     const latestBook = myLibrary[-1];
+
+    const bookElem = document.createElement('div');
+    const bookCover = document.createElement('div');
+    const attribution = document.createElement('p');
+}
+
+function removeFromDisplay() {
+
 }
 
 function addBookToLibrary(title, author, pages, read) {
     const entry = new Book(title, author, pages, read);
     myLibrary.push(entry);
 
-    updateLibraryDisplay(1);
+    addToDisplay();
 }
 
 function removeBookFromLibrary() {
 
-    updateLibraryDisplay(-1);
+    removeFromDisplay();
 }
 
 /* button handling */
