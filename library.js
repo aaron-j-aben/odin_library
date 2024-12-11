@@ -3,7 +3,7 @@
  */
 
 const myLibrary = [];
-// get reference to library "shelves"
+const shelves = document.querySelector(".lib-display");
 
 /**
  * 
@@ -57,7 +57,7 @@ function addToDisplay(index) {
     bookElem.appendChild(pgs);
     bookElem.appendChild(readCBox);
 
-    // add book to shelf
+    shelves.appendChild(bookElem);
 }
 
 function removeFromDisplay() {
