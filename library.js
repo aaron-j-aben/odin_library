@@ -60,7 +60,7 @@ function addToDisplay(index) {
     readLabel.textContent = "Read?";
     removeBookBtn.textContent = "Remove Book";
 
-    // make checkbox checked if book is read
+    removeBookBtn.addEventListener("click", removeFromDisplay);
 
     bookCover.appendChild(title);
     bookCover.appendChild(by);
@@ -77,12 +77,12 @@ function addToDisplay(index) {
 
 function removeFromDisplay(clickEvent) {
     const bookToRemove = clickEvent.target.closest(".book");
-    const libIndex = bookToRemove.dataset.libIndex.parseInt();
+    const libIndex = Number.parseInt(bookToRemove.dataset.libIndex);
 
     shelves.removeChild(bookToRemove);
 
-    for (let i = libIndex; i < myLibrary.children.length; i++) {
-        myLibrary.children[i].dataset.libIndex -= 1;
+    for (let i = libIndex; i < shelves.children.length; i++) {
+        shelves.children[i].dataset.libIndex -= 1;
     }
 
     removeBookFromLibrary(libIndex);
