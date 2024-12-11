@@ -101,4 +101,5 @@ addBookForm.addEventListener("submit", (e) => {
     const read = addBookForm.elements.read.checked;
 
     addBookToLibrary(title, author, pages, read);
+    addBookForm.reset();
 });
