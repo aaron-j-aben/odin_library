@@ -3,6 +3,7 @@
  */
 
 const myLibrary = [];
+// get reference to library "shelves"
 
 /**
  * 
@@ -28,7 +29,35 @@ function addToDisplay() {
 
     const bookElem = document.createElement('div');
     const bookCover = document.createElement('div');
-    const attribution = document.createElement('p');
+    const title = document.createElement('p');
+    const by = document.createElement('p');
+    const author = document.createElement('p');
+    const pgs = document.createElement('p');
+    const readCBox = document.createElement('div');
+
+    bookElem.classList.add('book');
+    bookCover.classList.add('book-cover');
+    title.classList.add('title');
+    author.classList.add('author');
+    pgs.classList.add('pages');
+    readCBox.classList.add('read', 'checkbox');
+
+    bookElem.dataset.libIndex = myLibrary.length - 1;
+
+    title.textContent = latestBook.title;
+    by.textContent = 'by';
+    author.textContent = latestBook.author;
+    pgs.textContent = latestBook.pages.toString();
+    // make checkbox checked if book is read
+
+    bookCover.appendChild(title);
+    bookCover.appendChild(by);
+    bookCover.appendChild(author);
+    bookElem.appendChild(bookCover);
+    bookElem.appendChild(pgs);
+    bookElem.appendChild(readCBox);
+
+    // add book to shelf
 }
 
 function removeFromDisplay() {
