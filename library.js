@@ -38,6 +38,7 @@ function addToDisplay(index) {
     const readCBox = document.createElement('input');
     const readLabel = document.createElement('label');
     const readInfo = document.createElement('div');
+    const removeBookBtn = document.createElement('button');
 
     bookElem.classList.add('book');
     bookCover.classList.add('book-cover');
@@ -47,6 +48,7 @@ function addToDisplay(index) {
     readCBox.classList.add('checkbox');
     readCBox.setAttribute("type", "checkbox");
     readInfo.classList.add('read');
+    removeBookBtn.classList.add('book-interact');
 
     bookElem.dataset.libIndex = index;
 
@@ -56,6 +58,7 @@ function addToDisplay(index) {
     pgs.textContent = latestBook.pages + " pages";
     readCBox.checked = latestBook.read;
     readLabel.textContent = "Read?";
+    removeBookBtn.textContent = "Remove Book";
 
     // make checkbox checked if book is read
 
@@ -67,6 +70,7 @@ function addToDisplay(index) {
     readInfo.appendChild(readLabel);
     readInfo.appendChild(readCBox);
     bookElem.appendChild(readInfo);
+    bookElem.appendChild(removeBookBtn);
 
     shelves.appendChild(bookElem);
 }
