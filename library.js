@@ -26,6 +26,11 @@ Book.prototype.info = function() {
     return `${this.title} by  ${this.author}, ${this.pages} pages, ${readString}`;
 };
 
+Book.prototype.toggleRead = function() {
+    this.read = !this.read;
+    return this.read;
+} 
+
 function addToDisplay(index) {
     const latestBook = myLibrary[index];
 
@@ -97,6 +102,14 @@ function addBookToLibrary(title, author, pages, read) {
 
 function removeBookFromLibrary(index) {
     myLibrary.splice(index, 1);
+}
+
+/* Update Read status for books */
+function updateReadStatus(clickEvent) {
+    const bookToUpdate = clickEvent.target.closest('.book');
+    const libIndex = Number.parseInt(bookToUpdate.dataset.libIndex);
+
+    myLibrary[libIndex].toggleRead();
 }
 
 /* button handling */
