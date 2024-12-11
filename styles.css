@@ -64,6 +64,7 @@ header > p {
 .book {
     width: 200px;
     text-align: center;
+    transition: 1s ease-in-out;
 }
 
 .book-cover {
@@ -72,7 +73,7 @@ header > p {
     justify-content: center;
     gap:10px;
     background-color: blanchedalmond;
-    height: 200px;
+    height: 250px;
     padding: 20px;
     margin-bottom: 10px;
 }

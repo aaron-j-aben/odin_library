@@ -4,6 +4,7 @@
 
 const myLibrary = [];
 const shelves = document.querySelector(".lib-display");
+const addBookBtn = document.querySelector("button.add");
 
 /**
  * 
@@ -77,3 +78,6 @@ function removeBookFromLibrary() {
 }
 
 /* button handling */
+addBookBtn.addEventListener("click", (e) => {
+    
+});
