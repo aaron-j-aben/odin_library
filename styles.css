@@ -51,7 +51,7 @@ header > p {
 /* Add New Book form */
 .add-form {
     background-color: beige;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 22rem;
@@ -98,6 +98,11 @@ header > p {
 
 #new-book:active {
     box-shadow: inset 1px 1px 2px black;
+}
+
+/* Book form transition in */
+.dropdown {
+    display: flex;
 }
 
 /* Shelf Styling */
