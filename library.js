@@ -16,22 +16,25 @@ const exampleRemove = document.querySelector(".example .book-interact");
  * @param {number} pages 
  * @param {booleaan} read 
  */
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    info() {
+        const readString = this.read ? "read" : "not read yet";
+        return `${this.title} by  ${this.author}, ${this.pages} pages, ${readString}`;
+    }
+
+    toggleRead() {
+        this.read = !this.read;
+        return this.read;
+    }
 }
-
-Book.prototype.info = function() {
-    const readString = this.read ? "read" : "not read yet";
-    return `${this.title} by  ${this.author}, ${this.pages} pages, ${readString}`;
-};
-
-Book.prototype.toggleRead = function() {
-    this.read = !this.read;
-    return this.read;
-} 
 
 function addToDisplay(index) {
     const latestBook = myLibrary[index];
